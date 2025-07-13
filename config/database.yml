@@ -11,11 +11,6 @@ test:
   <<: *default
   database: db/ecommerce_platform_test.sqlite3
 
-staging:
-  <<: *default
-  database: db/ecommerce_platform_staging.sqlite3
-
 production:
   <<: *default
-  database: db/ecommerce_platform_production.sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %> 
+  database: db/ecommerce_platform_production.sqlite3 
